@@ -14,3 +14,7 @@ try{
     //print_r($e);
     echo "Error al conectar a la base de datos";
 }
+$URL = "http://localhost/www.sistemadeventas.com";
+
+date_default_timezone_set("America/Costa_Rica");
+$fechaHora = date('Y-m-d H:i:s');

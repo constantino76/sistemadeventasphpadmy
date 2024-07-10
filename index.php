@@ -1,8 +1,32 @@
+
+
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
+
+
+<?php
+
+include('app/config.php');
+
+session_start();
+if(isset($_SESSION['sesion_email'] )){
+
+
+  echo"si existe la sesion ".$_SESSION['sesion_email'];
+}
+else{
+
+  echo"<h2>No existe la sesion </h2>";
+  header('Location:'.$URL.'/login/index.php');
+ /* echo"no existe la sesion" ;
+  header('Location: '.$URL.'/login'); */
+  
+}
+?>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -32,6 +56,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/app/controllers/login/Cerrarsesion.php" class="btn btn-danger">Cerrar sesion</a>
       </li>
     </ul>
 
