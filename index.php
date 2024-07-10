@@ -58,9 +58,9 @@ else{
         <a href="#" class="nav-link">Contact</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/app/controllers/login/Cerrarsesion.php" class="btn btn-danger">Cerrar sesion</a>
+        <a href="<?php echo$URL;?>/app/controllers/login/Cerrarsesion.php" class="btn btn-danger">Cerrar sesion</a>
       </li>
-    </ul>
+
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
