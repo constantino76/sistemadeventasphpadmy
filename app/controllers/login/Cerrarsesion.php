@@ -6,8 +6,8 @@ echo"cerrar sesion";
 
  if(isset($_SESSION['sesion_email'])){
 
-session_destroy();
-   header('Location: '.$URL.'/');
+       session_destroy();
+   header('Location:'.$URL.'/login');
     
  }
 ?>

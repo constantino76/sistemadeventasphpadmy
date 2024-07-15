@@ -14,13 +14,12 @@ include('app/config.php');
 
 session_start();
 if(isset($_SESSION['sesion_email'] )){
-
-
-  echo"si existe la sesion ".$_SESSION['sesion_email'];
+  
+ 
 }
 else{
 
-  echo"<h2>No existe la sesion </h2>";
+  //echo"<h2>No existe la sesion </h2>";
   header('Location:'.$URL.'/login/index.php');
  /* echo"no existe la sesion" ;
   header('Location: '.$URL.'/login'); */
@@ -32,27 +31,37 @@ else{
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Starter</title>
+<!-- librerias de sweatAlert -->
+
+
+
+
+
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="config/public/templates/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="public/templates/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="config/public/templates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="public/templates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+<!-- libreria de sweatAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="hold-transition sidebar-mini">
+
+
 <div class="wrapper">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
-     <h1 class="bg bg-gradient-fuchsia">Biemvenido al sistema de ventas </h1>
+     <h1 class="bg bg-gradient-fuchsia">Bienvenido al sistema de ventas </h1>
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="config/public/templates/AdminLTE-3.2.0/index3.html" class="nav-link">Home</a>
+        <a href="public/templates/AdminLTE-3.2.0/index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -96,7 +105,7 @@ else{
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="public/templates/AdminLTE-3.2.0/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -112,7 +121,7 @@ else{
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="config/public/templates/AdminLTE-3.2.0/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="public/templates/AdminLTE-3.2.0/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -128,7 +137,7 @@ else{
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="config/public/templates/AdminLTE-3.2.0/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="public/templates/AdminLTE-3.2.0/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -189,7 +198,7 @@ else{
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="config/public/templates/AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="public/templates/AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
@@ -198,7 +207,7 @@ else{
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="config/public/templates/AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="public/templates/AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
@@ -373,10 +382,10 @@ else{
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="config/public/templates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+<script src="public/templates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="config/public/templates/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="public/templates/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="config/public/templates/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
+<script src="public/templates/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
 </body>
 </html>
