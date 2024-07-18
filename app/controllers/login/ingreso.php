@@ -33,7 +33,7 @@ if( ($contador> 0) && ($password_user== $password_user_tabla)  ){
     echo "Datos incorrectos, vuelva a intentarlo";
     session_start();
     $_SESSION['mensaje'] = "Error datos incorrectos";
-    echo"datos erroneos .$contador";
+   
    header('Location:'.$URL.'/login');
 }
 

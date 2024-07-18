@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sistema de ventas </title>
 
+
+
+  
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -13,10 +17,31 @@
   <link rel="stylesheet" href="../config/public/templates/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../config/public/templates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
 
+<?php
+  session_start();
+    if(isset($_SESSION['mensaje'])){
+$respusta=$_SESSION['mensaje'] ; ?>
+<script>
+
+
+Swal.fire({
+  title: "Error!",
+  text: "El usuario o contrasenia son incorrectos",
+  icon: "error"
+});
+
+
+</script>
+
+<?php
+
+    }
+    ?>
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">

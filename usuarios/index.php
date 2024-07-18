@@ -1,8 +1,14 @@
+<?php  echo"<h2> modulo de listado de  usuarios</h2>";?>
+
+
+<div class="h2">Modulo de creacion de usuarios</div>
+
+
 
 <?php
-   include('app/config.php');
-   include('layout/Sesion.php');
-   include('layout/parte1.php');
+   include('../app/config.php');
+   include('../layout/Sesion.php');
+   include('../layout/parte1.php');
   
 ?>
   <!-- Content Wrapper. Contains page content -->
@@ -12,12 +18,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Sistema de ventas </h1>
+            <h1 class="m-0">listado de  usuarios </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
            
-              <li class="breadcrumb-item active">pagina de inicio</li>
+              <li class="breadcrumb-item active">listado de usuarios/li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -45,5 +51,6 @@
 <!-- ./wrapper -->
 
 <?php
- include('layout/parte2.php');
+ include('../layout/parte2.php');
 ?>
+
