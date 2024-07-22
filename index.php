@@ -27,7 +27,7 @@
 
     <!-- Main content -->
     <div class="content">
-      <h2> Contenido del sistema</h2>
+     
       <div class="container-fluid">
         <div class="row bg bg-dark">
           <div class="col-lg-6">

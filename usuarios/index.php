@@ -1,53 +1,59 @@
-<?php  echo"<h2> modulo de listado de  usuarios</h2>";?>
-
-
-<div class="h2">Modulo de creacion de usuarios</div>
-
-
 
 <?php
-   include('../app/config.php');
+  
+  include('../app/config.php');
    include('../layout/Sesion.php');
    include('../layout/parte1.php');
+   include('../app/controllers/usuarios/listusuarios.php')
   
+ 
 ?>
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">listado de  usuarios </h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-           
-              <li class="breadcrumb-item active">listado de usuarios/li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+  
+   
+  
 
     <!-- Main content -->
-    <div class="content">
-      <h2> Contenido del sistema</h2>
-      <div class="container-fluid">
-        <div class="row bg bg-dark">
-          <div class="col-lg-6">
+    <div class=" row justify-content-center mt-4 bl-2">
+       
+      <div class="col-md-8">
+      <h3> Usuarios</h3>
+    <table class="table  table-bordered table-striped table-hover">
+      
+  <thead class="bg-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombres </th>
+      <th scope="col">Email</th>
+    
+    </tr>
+    </thead>
+    
+  
+  <tbody class="card-body">
 
-          </div>
-        </div>
-       </div>
-      </div>
-            
-           
+    <?php  
+     foreach( $listado_usuarios as $user ){
 
-            
-  </aside>
+    ?>
+<tr>
+     <td><?php echo$user['id_usuario'];?></td>
+     <td><?php echo$user['nombres'];?></td>
+     <td><?php echo $user['email'];?></td> 
+</tr>
+
+<?php  
+
+     }
+    
+    
+    
+    ?>
+    
+  </tbody>
+</table>
 </div>
+</div>
+      
 <!-- ./wrapper -->
 
 <?php

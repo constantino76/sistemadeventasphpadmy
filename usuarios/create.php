@@ -1,51 +1,43 @@
-
-<div class="h2">Modulo de creacion de usuarios</div>
-
-
-
-<?php
+   <?php
    include('../app/config.php');
-   include('../layout/Sesion.php');
-   include('../layout/parte1.php');
-  
-?>
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">registro de un nuevo usuario </h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-           
-              <li class="breadcrumb-item active">Modulo de registro</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+    include('../layout/Sesion.php');
+   include('../layout/parte1.php');?>
 
-    <!-- Main content -->
-    <div class="content">
-      <h2> Contenido del sistema</h2>
-      <div class="container-fluid">
-        <div class="row bg bg-dark">
-          <div class="col-lg-6">
+<div class="row mt-3 justify-content-center">
 
-          </div>
-        </div>
-       </div>
-      </div>
-            
-           
+<div class="col-md-6">
 
-            
-  </aside>
+<div class="card card-primary">
+<div class="card-header">
+<h3 class="card-title">Registro de usuarios</h3>
 </div>
+
+
+<form>
+<div class="card-body">
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+<div class="form-group">
+<label for="exampleInputPassword1">Password</label>
+<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+</div></div>
+
+
+
+
+</div>
+
+
+</form>     
+</div>
+
+
+ 
+
+
+
+
 <!-- ./wrapper -->
 
 <?php

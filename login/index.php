@@ -24,7 +24,7 @@
 
 <?php
   session_start();
-    if(isset($_SESSION['mensaje'])){
+    if(isset(  $_SESSION['mensaje'] )){
 $respusta=$_SESSION['mensaje'] ; ?>
 <script>
 

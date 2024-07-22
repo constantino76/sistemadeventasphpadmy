@@ -1,5 +1,12 @@
+
+<!-- libreria de swealert -->
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<?php
+
+
+<?php 
+
+
 session_start();
 if(isset($_SESSION['sesion_email'] )){
   $email=$_SESSION['sesion_email']; 
