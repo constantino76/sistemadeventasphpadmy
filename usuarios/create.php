@@ -5,7 +5,7 @@
 
 <div class="row mt-3 justify-content-center">
 
-<div class="col-md-6">
+<div class="col-md-8">
 
 <div class="card card-primary">
 <div class="card-header">
@@ -15,20 +15,27 @@
 
 <form>
 <div class="card-body">
-<div class="form-group">
-<label for="exampleInputEmail1">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-<div class="form-group">
-<label for="exampleInputPassword1">Password</label>
-<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-</div></div>
+     <div class="form-group">
 
+<label for="nombre"> Nombre</label>
+<input type="text" class="form-control" id ="nombre" placeholder="nombre">
+
+     </div>
+<div class="form-group">
+<label for="exampleInputEmail1">Correo</label>
+<input type="email" class="form-control" id="email" placeholder="ingrese su correo">
+
+</div>
+<div class="form-group">
+<label for="contrasenia">Contrasenia</label>
+<input type="password" class="form-control" id="contrasenia" placeholder="Ingrese su contrasenia ">
+</div>
 
 
 
 </div>
 
-
+<input type="submit" value ="registrar">
 </form>     
 </div>
 

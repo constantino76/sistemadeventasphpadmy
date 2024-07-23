@@ -18,4 +18,4 @@ $URL = "http://localhost/www.sistemadeventas.com";
 
 date_default_timezone_set("America/Costa_Rica");
 $fechaHora = date('Y-m-d H:i:s');
-echo$fechaHora;
+echo"<h4>$fechaHora;</h4> " ;
