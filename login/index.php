@@ -12,12 +12,14 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../config/public/templates/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../public/templates/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="../config/public/templates/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="../public/templates/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../config/public/templates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="../public/templates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+  
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -25,21 +27,20 @@
 <?php
   session_start();
     if(isset(  $_SESSION['mensaje'] )){
-$respusta=$_SESSION['mensaje'] ; ?>
+$respuesta=$_SESSION['mensaje'] ; ?>
 <script>
 
-
-Swal.fire({
+ Swal.fire({
   title: "Error!",
-  text: "El usuario o contrasenia son incorrectos",
-  icon: "error"
-});
+  text: "<?php  echo$respuesta ?> ",
+ icon: "error" }
+);
 
 
 </script>
 
 <?php
-
+unset($_SESSION['mensaje']);
     }
     ?>
   <!-- /.login-logo -->
@@ -49,7 +50,7 @@ Swal.fire({
     </div>
   <img  src="https://www.negociosypymes.com/wp-content/uploads/2021/11/venta-online-ecommerce-2-800x400.jpg">
     <div class="card-body">
-      <p class="login-box-msg">Ingrese sus datos</p>
+      <p class="login-box-msg">Ingrese susdatos</p>
 
       <form action="../app/controllers/login/ingreso.php" method="post">
         <div class="input-group mb-3">
@@ -101,10 +102,10 @@ Swal.fire({
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../config/public/templates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+<script src="../public/templates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../config/public/templates/AdminLTE-3.2.0//plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../public/templates/AdminLTE-3.2.0//plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../config/public/templates/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
+<script src="../public/templates/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
 </body>
 </html>

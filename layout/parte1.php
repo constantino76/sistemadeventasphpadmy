@@ -70,7 +70,7 @@
           <img src="<?php echo $URL ;?>/public/templates/AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php  echo "<h5>$usuario</h5>";?></a>
+          <a href="#" class="d-block"><?php  echo "<h5>$nombre</h5>";?></a>
         </div>
       </div>
 

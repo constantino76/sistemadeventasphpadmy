@@ -1,46 +1,25 @@
 
-<!-- libreria de swealert -->
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<!-- libreria de swalerrt -->
 
 <?php 
-
-
 session_start();
 if(isset($_SESSION['sesion_email'] )){
-  $email=$_SESSION['sesion_email']; 
-  $sql = "SELECT * FROM tb_usuarios WHERE email = '$email' ";
+  $email_sesion=$_SESSION['sesion_email']; 
+  $sql = "SELECT * FROM tb_usuarios WHERE email = '$email_sesion' ";
   $query = $pdo->prepare($sql);
   $query->execute();
-
-  $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
+$nombre="";
+$usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
 foreach ($usuarios as $usuario){
-    
-    
-    $nombres = $usuario['nombres'];
-  
-}
-  $usuario=$nombres;
-  ?>
-<script>
-Swal.fire({
-  title: "",
-  text: "<?php echo"Bienvenido".$usuario ; ?>",
-  icon: "success"
-});
-
-
-</script>
+      $nombre = $usuario['nombres'];
+} ?>
 
  <?php
+
 }
 else{
-
-  //redireccionamos al login
-  header('Location:'.$URL.'/login/index.php');
- /* echo"no existe la sesion" ;
-  header('Location: '.$URL.'/login'); */
   
+  header('Location:'.$URL.'/login/index.php');
+ 
 }
 ?>

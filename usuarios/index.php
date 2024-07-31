@@ -6,7 +6,7 @@
    include('../layout/parte1.php');
    include('../app/controllers/usuarios/listusuarios.php')
   
- 
+   
 ?>
   
    
@@ -15,7 +15,7 @@
     <!-- Main content -->
     <div class=" row justify-content-center mt-4 bl-2">
        
-      <div class="col-md-8">
+      <div class="col-sm-6">
       <h3> Usuarios</h3>
     <table class="table  table-bordered table-striped table-hover">
       
@@ -32,11 +32,12 @@
   <tbody class="card-body">
 
     <?php  
+    $contador=0;
      foreach( $listado_usuarios as $user ){
-
+$contador++;
     ?>
 <tr>
-     <td><?php echo$user['id_usuario'];?></td>
+     <td><?php echo$contador;?></td>
      <td><?php echo$user['nombres'];?></td>
      <td><?php echo $user['email'];?></td> 
 </tr>
