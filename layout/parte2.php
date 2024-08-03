@@ -13,6 +13,9 @@
            
       <footer class="blockquote-footer"><h4><strong>Sistema de ventas  2024</p><h4></footer>
 </div>
+   <!-- bootstrap-icons -->
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <!-- REQUIRED SCRIPTS -->
    <!-- jQuery -->

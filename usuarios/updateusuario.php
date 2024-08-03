@@ -1,6 +1,3 @@
-   
-   <!-- libreria de swalert -->
-   
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
    
 <!-- recordar esta seccion dse php para los mensajes de sesion  debe ir primero  -->
@@ -9,6 +6,7 @@
 include('../app/config.php');
 include('../layout/Sesion.php');
 include('../layout/parte1.php');
+include('../app/controllers/usuarios/updateusuario.php');
 // inicializamos las variables
 ?>
 
@@ -16,23 +14,23 @@ include('../layout/parte1.php');
 
 <div class="col-sm-4">
 
-<div class="card  card-primary">
-<div class="card-header">
-<h3 class="card-title">Registro de usuarios</h3>
+<div class="card card-success">
+<div class="card-header   mt-1">
+<h3 class="card-title">Edicion de usuarios</h3>
 </div>
 
 
-<form action="../app/controllers/usuarios/create.php" method="post">
+<form action="../app/controllers/usuarios/updateusuario.php" method="post">
 <div class="card-body">
      <div class="form-group">
 
 <label for="nombre"> Nombre</label>
-<input type="text" class="form-control" name ="nombres" placeholder="nombre" required>
+<input type="text" class="form-control" name ="nombres" placeholder="nombre"  value="<?php echo $nombres;?>"required>
 
      </div>
 <div class="form-group">
 <label for="exampleInputEmail1">Correo</label>
-<input type="email" class="form-control" name="email" placeholder="ingrese su correo" required>
+<input type="email" class="form-control" name="email"  placeholder="ingrese su correo" value="<?php echo $email;?>" required>
 
 </div>
 <div class="form-group">
@@ -47,24 +45,8 @@ include('../layout/parte1.php');
 </div>
 <div class="form-group">
     <a  href="index.php"  class="btn btn-secondary">cancelar</a>
-<input type="submit"  class="btn btn-primary"value ="registrar">
+<input type="submit"  class="btn btn-success"value ="Actualizar">
 
 </div>
 
 </div>
-
-
-</form>     
-</div>
-
-
- 
-
-
-
-
-<!-- ./wrapper -->
-
-<?php
- include('../layout/parte2.php');
-?>

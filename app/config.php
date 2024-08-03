@@ -19,3 +19,21 @@ $URL = "http://localhost/www.sistemadeventas.com";
 
 date_default_timezone_set("America/Caracas");
 $fechaHora = date('Y-m-d H:i:s');
+
+
+
+if (isset($_SESSION['mensaje'])){
+    $mensaje_=$_SESSION['mensaje'];
+    $icono_=$_SESSION['icono'];
+    $titulo=$_SESSION['titulo'];
+?>
+ <script>
+// imprimimos el mensaje
+Swal.fire({
+ title: "<?php echo$titulo;?>",
+ text: "<?php  echo$mensaje_;?> ",
+icon: "<?php echo$icono_;  ?>" }
+);
+unset($_SESSION['mensaje']);
+unset($_SESSION['icono']);
+<?php  }  ?>
