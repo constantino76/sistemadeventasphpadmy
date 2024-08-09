@@ -1,8 +1,9 @@
 
 
 
-<?php include('../app/config.php'); include('../layout/Sesion.php'); include('../layout/parte1.php'); 
-
+<?php include('../app/config.php');
+ include('../layout/Sesion.php');
+  include('../layout/parte1.php'); 
 include('../app/controllers/usuarios/listusuarios.php'); 
 
 ?>
@@ -46,7 +47,7 @@ include('../app/controllers/usuarios/listusuarios.php');
                       <a href="updateusuario.php?id=<?php echo $idusuario;  ?>" type="button" class="btn btn-success pl-1">
                         <i class="bi bi-pencil-square"></i>
                         Editar</a>
-                      <a href="userdelete.php?id=<?php echo $idusuario; ?>" type="button" class="btn btn-danger pl-1">
+                      <a href="delete.php?id=<?php echo $idusuario; ?>" type="button" class="btn btn-danger pl-1">
                         <i class="bi bi-trash"></i> Eliminar</a>
                     </div>
                   </td>
@@ -76,6 +77,7 @@ include('../app/controllers/usuarios/listusuarios.php');
 
 
       <?php
+      include ('../layout/mensajes.php'); 
       include('../layout/parte2.php');
       ?>
 

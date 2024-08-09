@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+
    
 <!-- recordar esta seccion dse php para los mensajes de sesion  debe ir primero  -->
 <?php  
@@ -20,8 +20,15 @@ include('../app/controllers/usuarios/updateusuario.php');
 </div>
 
 
-<form action="../app/controllers/usuarios/updateusuario.php" method="post">
+<form action="../app/controllers/usuarios/update.php" method="post">
 <div class="card-body">
+
+<div class="form-group">
+<label for="id_get"></label>
+<input  type="text" class="form-control" name="id_get"value="<?php echo $id_get ?>" hidden>
+
+
+</div>
      <div class="form-group">
 
 <label for="nombre"> Nombre</label>
@@ -50,3 +57,12 @@ include('../app/controllers/usuarios/updateusuario.php');
 </div>
 
 </div>
+
+
+
+<?php  
+include('../layout/mensajes.php');
+include('../layout/parte2.php') ;
+
+
+?>

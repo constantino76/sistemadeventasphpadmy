@@ -6,6 +6,7 @@
  * Time: 16:19
  */
 
+
 include('../../config.php');
 
 $email = $_POST['email'];
@@ -26,17 +27,21 @@ foreach ($usuarios as $usuario){
     $password_user_tabla = $usuario['password_user'];
 }
 
-
+// hacer un session_start(); por cada sesion 
 
 if( ($contador > 0) && (password_verify($password_user, $password_user_tabla))  ){
-   echo "Datos correctos";
+   
     session_start();
     $_SESSION['sesion_email'] = $email;
+    if($contador>0){ 
+        
+        $_SESSION['nombreusuario'] = $nombres;}
+   
       header('Location: '.$URL.'/index.php');
 }else{
     echo "Datos incorrectos, vuelva a intentarlo";
     session_start();
-    $_SESSION['mensaje'] = "Error datos incorrectos";
+    $_SESSION['mensaje'] = "Error la contrasenia o el email son incorrectos";
  header('Location: '.$URL.'/login');
 }
 

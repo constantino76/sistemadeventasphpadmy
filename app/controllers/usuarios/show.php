@@ -2,7 +2,6 @@
 
 
 <?php    $id= $_GET["id"];  
-echo$id; 
 
 $Sql_usuario= "SELECT *FROM tb_usuarios    where id_usuario=$id" ;
 $query_usuarios=$pdo->prepare($Sql_usuario);

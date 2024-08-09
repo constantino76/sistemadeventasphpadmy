@@ -1,8 +1,36 @@
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 <?php
    include('app/config.php');
    include('layout/Sesion.php');
    include('layout/parte1.php');
+
+    
+  
+   if(isset($_SESSION['nombreusuario'])){
+  $nombre= $_SESSION['nombreusuario'];
+
+
+?>
+<script>
+
+Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Bienvenido<?php  echo $nombre ?>;",
+  showConfirmButton: false,
+  timer: 1500
+});
+
+</script>
+
+<?php
+
+
+unset($_SESSION['nombreusuario']);
+
+
+
+   }
   
 ?>
   <!-- Content Wrapper. Contains page content -->
@@ -40,11 +68,13 @@
            
 
             
-  </aside>
+
 </div>
 <!-- ./wrapper -->
 
 <?php
+
+include('layout/mensajes.php');
  include('layout/parte2.php');
 ?>
 

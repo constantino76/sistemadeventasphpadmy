@@ -12,6 +12,7 @@ $nombre="";
 $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
 foreach ($usuarios as $usuario){
       $nombre = $usuario['nombres'];
+      $id_usuario_sesion = $usuario['id_usuario'];
 } ?>
 
  <?php

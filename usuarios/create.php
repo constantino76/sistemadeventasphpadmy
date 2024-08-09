@@ -66,5 +66,7 @@ include('../layout/parte1.php');
 <!-- ./wrapper -->
 
 <?php
+
+include('../layout/mensajes.php');
  include('../layout/parte2.php');
 ?>

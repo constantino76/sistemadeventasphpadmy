@@ -12,14 +12,17 @@ include("../app/controllers/usuarios/show.php");
 
 <div class="col-sm-4">
 
-<div class="card  card-primary">
+<div class="card  card-danger">
 <div class="card-header">
 <h3 class="card-title">Datos usuario</h3>
 </div>
 
 
+ <form action="../app/controllers/usuarios/deleteusuario.php" method="post">
 
-<div class="card-body">
+ <div class="card-body">
+<input type="text"  name="id" value="<?php echo$id;?>"hidden>
+
      <div class="form-group">
 
 <label for="nombre"> Nombre</label>
@@ -32,19 +35,22 @@ include("../app/controllers/usuarios/show.php");
 
 </div>
 
+ 
 
-  
 <div class="form-group">
     <a  href="index.php"  class="btn btn-secondary">Regresar</a>
-
-
-</div>
+    <input type="submit" class="btn btn-danger" value="Eliminar">
 
 </div>
 
+</div>
+
+
+
+ </form>
+</div>
 
 <?php
-include("../layout/mensajes.php");
 include("../layout/parte2.php");
 
 ?>

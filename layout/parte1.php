@@ -59,7 +59,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-2">
     <!-- Brand Logo -->
     <a href="<?php echo$URL ;?>" class="brand-link">
       <img src="<?php echo $URL ;?>/public/images/carrito.PNG" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -111,7 +111,7 @@
           </li>
           <li class="nav-item p-4">
          
-             <a href="<?php echo$URL;?>/app/controllers/login/Cerrarsesion.php" class="btn btn-danger"> <i class="nav-icon fas fa-door-closed" style="color:white"></i>Cerrar sesion</a>
+             <a href="<?php echo$URL;?>/app/controllers/login/Cerrarsesion.php" class="btn btn-danger"> <i class="nav-icon fas fa-door-closed" style="color:green"></i>Cerrar sesion</a>
             </li>
 
         </ul>
@@ -125,7 +125,8 @@
 
 .mt-2{
 
-    background-color: orange !important
+    background-color: blue
 }
 
-  </style>
+
+  </style> 

@@ -3,7 +3,7 @@
 <div class=" card-body  text-center bg-light">
     <div class=" card-header">Redes Sociales
 
-    <div  style="padding-left:6px"> 
+    <div  > 
               <i class="bi bi-whatsapp" style="color:green"></i>
               <i class="bi bi-facebook"style="color:blue"></i>
               <i class=" bi bi-instagram"style="color:orange"></i>
@@ -13,9 +13,7 @@
            
       <footer class="blockquote-footer"><h4><strong>Sistema de ventas  2024</p><h4></footer>
 </div>
-   <!-- bootstrap-icons -->
-
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
 
 <!-- REQUIRED SCRIPTS -->
    <!-- jQuery -->
@@ -40,6 +38,9 @@
 <script src="<?php echo $URL ;?>/public/templates/AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="<?php echo $URL ;?>/public/templates/AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="<?php echo $URL ;?>/public/templates/AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+ <!-- bootstrap-icons -->
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </html>
 
 

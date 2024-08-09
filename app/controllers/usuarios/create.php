@@ -24,7 +24,7 @@ VALUES (:nombres,:email,:id_rol,:password_user,:fyh_creacion)");
     session_start();
     $_SESSION['mensaje'] = "Se registro al usuario de la manera correcta";
       $_SESSION['icono']="success";
-      $_SESSION['titulo']="Bien echo";
+    
     header('Location: '.$URL.'/usuarios/create.php');
 
 }else{
@@ -32,7 +32,7 @@ VALUES (:nombres,:email,:id_rol,:password_user,:fyh_creacion)");
     session_start();
     $_SESSION['mensaje'] = "Error las contraseñas no son iguales";
     $_SESSION['icono']="error";
-    $_SESSION['titulo']="Error";
+
     header('Location: '.$URL.'/usuarios/create.php');
 }
 

@@ -26,8 +26,8 @@
 
 <?php
   session_start();
-    if(isset(  $_SESSION['mensaje'] )){
-$respuesta=$_SESSION['mensaje'] ; ?>
+    if(isset(  $_SESSION['mensaje'])){
+$respuesta=$_SESSION['mensaje'];?>
 <script>
 
  Swal.fire({
@@ -50,7 +50,7 @@ unset($_SESSION['mensaje']);
     </div>
   <img  src="https://www.negociosypymes.com/wp-content/uploads/2021/11/venta-online-ecommerce-2-800x400.jpg">
     <div class="card-body">
-      <p class="login-box-msg">Ingrese susdatos</p>
+      <p class="login-box-msg">Ingrese sus datos</p>
 
       <form action="../app/controllers/login/ingreso.php" method="post">
         <div class="input-group mb-3">
