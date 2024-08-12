@@ -42,12 +42,12 @@ include('../app/controllers/usuarios/updateusuario.php');
 </div>
 <div class="form-group">
 <label for="contrasenia">Contrasenia</label>
-<input type="password" class="form-control" name="password_user" placeholder="Ingrese su contrasenia " required>
+<input type="password" class="form-control" name="password_user" placeholder="Ingrese su contrasenia ">
 </div>
 
 <div class="form-group">
 <label> Repita la contrasenia</label>
-<input type="password" class="form-control" name="password_repeat" required> 
+<input type="password" class="form-control" name="password_repeat"> 
 
 </div>
 <div class="form-group">

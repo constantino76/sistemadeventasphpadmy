@@ -85,11 +85,11 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
+          <li class="nav-item">
             <a href="#" class="nav-link ">
               <i class=" nav-icon  fas fa-users"></i>
               <p>       Usuarios
-                <i class=" right  fas fa-angle-left"></i>
+                <i class=" right  fas fa-angle-right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -106,9 +106,70 @@
                   <p>Crear usuarios</p>
                 </a>
               </li>
- 
+               
+
             </ul>
           </li>
+
+          <!-- Roles -->
+
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class=" nav-icon  fas fa-address-card"></i>
+              <p>       Roles
+                <i class=" right  fas fa-angle-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo$URL ;?>/roles/index.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listado de roles</p>
+                  
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo$URL ;?>/roles/create.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Crear roles</p>
+                </a>
+              </li>
+               
+
+            </ul>
+          </li>
+
+         <!-- Categorias -->
+
+
+
+         <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class=" nav-icon  fas fa-layer-group"></i>
+              <p>       Categorias
+                <i class=" right  fas fa-angle-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo$URL ;?>/usuarios/index.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listado de Categorias</p>
+                  
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo$URL ;?>/categoria/create.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Crear categoria</p>
+                </a>
+              </li>
+               
+
+            </ul>
+          </li>
+
+
           <li class="nav-item p-4">
          
              <a href="<?php echo$URL;?>/app/controllers/login/Cerrarsesion.php" class="btn btn-danger"> <i class="nav-icon fas fa-door-closed" style="color:green"></i>Cerrar sesion</a>

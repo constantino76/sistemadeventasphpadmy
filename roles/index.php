@@ -4,7 +4,7 @@
 <?php include('../app/config.php');
  include('../layout/Sesion.php');
   include('../layout/parte1.php'); 
-include('../app/controllers/usuarios/listusuarios.php'); 
+include('../app/controllers/roles/list_roles.php'); 
 
 ?>
 
@@ -13,16 +13,16 @@ include('../app/controllers/usuarios/listusuarios.php');
     <div class="col-md-8">
       <div class="card card-secondary mt-3">
         <div class="card-header">
-          <h3 class="card-title">lista de usuarios </h3>
+          <h3 class="card-title">lista de Roles </h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
           <table id="tablausuarios" class="table table-bordered table-hover table-striped">
             <thead class="bg bg-dark">
               <tr>
-                <th>#</th>
+                <!-- <th>#</th> -->
+                <th>Numero rol</th>
                 <th>Nombre</th>
-                <th>Email</th>
                 <th>Acciones</th>
               </tr>
             </thead>
@@ -30,24 +30,24 @@ include('../app/controllers/usuarios/listusuarios.php');
 
               <?php
               $contador = 0;
-              foreach ($listado_usuarios as $usuario) {
+              foreach ($listado_roles as $rol) {
                 $contador++;
-                $idusuario = $usuario['id_usuario'];
+                $idrol = $rol['id_rol'];
               ?>
 
                 <tr>
 
-                  <td><?php echo $contador; ?></td>
-                  <td><?php echo $usuario['nombres'];?></td>
-                  <td><?php echo $usuario['email']; ?> </td>
+                 // <td><?php echo $contador; ?></td>
+                  <td><?php echo $rol['id_rol'];?></td>
+                  <td><?php echo $rol['rol']; ?> </td>
                   <td>
                     <div class="btn-group justify-content-center pl-3">
-                      <a href="show.php?id=<?php echo $idusuario; ?>" type="button" class="btn btn-info"><i class="fa fa-eye">Ver</i></a>
+                      <a href="show.php?id=<?php echo $idrol; ?>" type="button" class="btn btn-info"><i class="fa fa-eye">Ver</i></a>
 
-                      <a href="updateusuario.php?id=<?php echo $idusuario; ?>" type="button" class="btn btn-success pl-1">
+                      <a href="updateusuario.php?id=<?php echo $idrol; ?>" type="button" class="btn btn-success pl-1">
                         <i class="bi bi-pencil-square"></i>
                         Editar</a>
-                      <a href="delete.php?id=<?php echo $idusuario; ?>" type="button" class="btn btn-danger pl-1">
+                      <a href="delete.php?id=<?php echo $idrol; ?>" type="button" class="btn btn-danger pl-1">
                         <i class="bi bi-trash"></i> Eliminar</a>
                     </div>
                   </td>

@@ -74,7 +74,7 @@ unset($_SESSION['nombreusuario']);
 
 <?php
 
-include('layout/mensajes.php');
+//include('layout/mensajes.php');
  include('layout/parte2.php');
 ?>
 

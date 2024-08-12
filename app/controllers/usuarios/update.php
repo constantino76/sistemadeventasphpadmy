@@ -9,7 +9,44 @@ $id_usuario= $_POST["id_get"];
 $password_user =$_POST["password_user"];
 $password_repeat=$_POST["password_repeat"];
 
-if($password_user == $password_repeat){
+if($password_user==""){
+
+    if($password_user == $password_repeat){
+
+        $password_user = password_hash($password_user, PASSWORD_DEFAULT);
+    
+        $sentencia = $pdo->prepare("UPDATE tb_usuarios
+        SET nombres=:nombres,
+         email=:email,
+           fyh_actualizacion=:fyh_actualizacion
+            where id_usuario=:id_usuario");
+    
+        $sentencia->bindParam('nombres',$nombres);
+        $sentencia->bindParam('email',$email);
+        $sentencia->bindParam('fyh_actualizacion',$fechaHora);
+        $sentencia->bindParam('id_usuario',$id_usuario);
+        $sentencia->execute();
+    
+        session_start();
+        $_SESSION['mensaje'] = "Se actualizo  el usuario de la manera correcta";
+          $_SESSION['icono']="success";
+        
+     
+        header('Location: '.$URL.'/usuarios');
+    
+    }else{
+    echo "error las contraseñas no son iguales";
+        session_start();
+         $_SESSION['mensaje'] = "Error las contraseñas no son iguales";
+         $_SESSION['icono']="error";
+       header('Location: '.$URL.'/usuarios/updateusuario.php?id='.$id_usuario);
+    }
+    
+
+
+}
+
+  else if($password_user == $password_repeat){
 
     $password_user = password_hash($password_user, PASSWORD_DEFAULT);
 
@@ -28,10 +65,10 @@ if($password_user == $password_repeat){
     $sentencia->execute();
 
     session_start();
-    $_SESSION['mensaje'] = "Se actualizo usuario de la manera correcta";
+    $_SESSION['mensaje'] = "Se actualizo  el usuario de la manera correcta";
       $_SESSION['icono']="success";
     
-      echo"Se actualizo  ";
+ 
     header('Location: '.$URL.'/usuarios');
 
 }else{
