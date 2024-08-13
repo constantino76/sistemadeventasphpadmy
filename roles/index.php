@@ -8,7 +8,6 @@ include('../app/controllers/roles/list_roles.php');
 
 ?>
 
-
   <div class="row justify-content-center mt-3">
     <div class="col-md-8">
       <div class="card card-secondary mt-3">
@@ -17,7 +16,7 @@ include('../app/controllers/roles/list_roles.php');
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-          <table id="tablausuarios" class="table table-bordered table-hover table-striped">
+          <table id="tablaroles" class="table table-bordered table-hover table-striped">
             <thead class="bg bg-dark">
               <tr>
                 <!-- <th>#</th> -->
@@ -37,7 +36,7 @@ include('../app/controllers/roles/list_roles.php');
 
                 <tr>
 
-                 // <td><?php echo $contador; ?></td>
+                <td><?php echo $contador; ?></td>
                   <td><?php echo $rol['id_rol'];?></td>
                   <td><?php echo $rol['rol']; ?> </td>
                   <td>
@@ -84,16 +83,16 @@ include('../app/controllers/roles/list_roles.php');
 
       <script>
         $(function() {
-          $("#tablausuarios").DataTable({
+          $("#tablaroles").DataTable({
             "pageLength": 5,
             "language": {
               "emptyTable": "No hay información",
-              "info": "Mostrando _START_ a _END_ de _TOTAL_ Usuarios",
+              "info": "Mostrando _START_ a _END_ de _TOTAL_ Roles",
               "infoEmpty": "Mostrando 0 a 0 de 0 Usuarios",
-              "infoFiltered": "(Filtrado de _MAX_ total Usuarios)",
+              "infoFiltered": "(Filtrado de _MAX_ total Roles)",
               "infoPostFix": "",
               "thousands": ",",
-              "lengthMenu": "Mostrar _MENU_ Usuarios",
+              "lengthMenu": "Mostrar _MENU_ Roles",
               "loadingRecords": "Cargando...",
               "processing": "Procesando...",
               "search": "Buscador:",
@@ -132,6 +131,6 @@ include('../app/controllers/roles/list_roles.php');
                 collectionLayout: 'fixed three-column'
               }
             ],
-          }).buttons().container().appendTo('#tablausuarios_wrapper .col-md-6:eq(0)');
+          }).buttons().container().appendTo('#tablaroles_wrapper .col-md-6:eq(0)');
         });
       </script>
