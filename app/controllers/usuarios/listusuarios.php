@@ -1,10 +1,6 @@
 <?php
-
-
-
-$Sql_usuarios= "SELECT *FROM tb_usuarios";
-$query_usuarios=$pdo->prepare($Sql_usuarios);
+$sql_usuarios = "SELECT us.id_usuario as id_usuario, us.nombres as nombres, us.email as email, rol.rol as rol 
+                  FROM tb_usuarios as us INNER JOIN tb_roles as rol ON us.id_rol = rol.id_rol ";
+$query_usuarios = $pdo->prepare($sql_usuarios);
 $query_usuarios->execute();
-$listado_usuarios=$query_usuarios->fetchAll(PDO::FETCH_ASSOC);
-
-?>
+$usuarios_datos = $query_usuarios->fetchAll(PDO::FETCH_ASSOC);

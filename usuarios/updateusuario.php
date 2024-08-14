@@ -7,6 +7,7 @@ include('../app/config.php');
 include('../layout/Sesion.php');
 include('../layout/parte1.php');
 include('../app/controllers/usuarios/updateusuario.php');
+include('../app/controllers/roles/list_roles.php');
 // inicializamos las variables
 ?>
 
@@ -50,6 +51,23 @@ include('../app/controllers/usuarios/updateusuario.php');
 <input type="password" class="form-control" name="password_repeat"> 
 
 </div>
+
+<div class="form-group ">
+
+<label for="rol" class="bg-danger">Selecciona tu rol:</label>
+    <select name="rol" id="rol" class="form-control bg-dark">
+      <?php 
+         foreach($listado_roles as $rol){  ?>
+
+<option value="<?php echo$rol['id_rol'] ?>"> <?php echo$rol['rol'] ?></option>
+<?php
+    
+         }
+        ?>
+      
+    </select>
+</div>
+
 <div class="form-group">
     <a  href="index.php"  class="btn btn-secondary">cancelar</a>
 <input type="submit"  class="btn btn-success"value ="Actualizar">

@@ -4,10 +4,10 @@ include('../../config.php');
 
 $nombres = $_POST['nombres'];
 $email = $_POST['email'];
-$rol = 3;
+$rol =   $_POST['rol'];
 $password_user = $_POST['password_user'];
 $password_repeat = $_POST['password_repeat'];
-
+echo$rol;
 if($password_user == $password_repeat){
     $password_user = password_hash($password_user, PASSWORD_DEFAULT);
     $sentencia = $pdo->prepare("INSERT INTO tb_usuarios

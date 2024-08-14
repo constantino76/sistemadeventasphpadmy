@@ -1,7 +1,5 @@
    
-   <!-- libreria de swalert -->
-   
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+  
    
 <!-- recordar esta seccion dse php para los mensajes de sesion  debe ir primero  -->
 <?php  
@@ -9,6 +7,7 @@
 include('../app/config.php');
 include('../layout/Sesion.php');
 include('../layout/parte1.php');
+include('../app/controllers/roles/list_roles.php');
 // inicializamos las variables
 ?>
 
@@ -45,6 +44,23 @@ include('../layout/parte1.php');
 <input type="password" class="form-control" name="password_repeat" required> 
 
 </div>
+
+<div class="form-group ">
+
+<label for="rol" class="bg-danger">Selecciona tu rol:</label>
+    <select name="rol" id="rol" class="form-control bg-dark">
+      <?php 
+         foreach($listado_roles as $rol){  ?>
+
+<option value="<?php echo$rol['id_rol'] ?>"> <?php echo$rol['rol'] ?></option>
+<?php
+    
+         }
+        ?>
+      
+    </select>
+</div>
+
 <div class="form-group">
     <a  href="index.php"  class="btn btn-secondary">cancelar</a>
 <input type="submit"  class="btn btn-primary"value ="registrar">

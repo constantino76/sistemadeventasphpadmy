@@ -23,6 +23,7 @@ include('../app/controllers/usuarios/listusuarios.php');
                 <th>#</th>
                 <th>Nombre</th>
                 <th>Email</th>
+                <th>Rol</th>
                 <th>Acciones</th>
               </tr>
             </thead>
@@ -30,16 +31,16 @@ include('../app/controllers/usuarios/listusuarios.php');
 
               <?php
               $contador = 0;
-              foreach ($listado_usuarios as $usuario) {
+              foreach ($usuarios_datos as $usuario) {
                 $contador++;
                 $idusuario = $usuario['id_usuario'];
               ?>
 
                 <tr>
-
                   <td><?php echo $contador; ?></td>
                   <td><?php echo $usuario['nombres'];?></td>
                   <td><?php echo $usuario['email']; ?> </td>
+                  <td><?php echo $usuario['rol'];?></td>
                   <td>
                     <div class="btn-group justify-content-center pl-3">
                       <a href="show.php?id=<?php echo $idusuario; ?>" type="button" class="btn btn-info"><i class="fa fa-eye">Ver</i></a>
@@ -65,6 +66,7 @@ include('../app/controllers/usuarios/listusuarios.php');
                 <th>#</th>
                 <th>Nombre</th>
                 <th>Email</th>
+                <th>Rol</th>
                 <th>Aciones</th>
 
               </tr>

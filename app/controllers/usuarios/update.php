@@ -3,11 +3,13 @@
 
 <?php
 include('../../config.php');
+
 $nombres=$_POST["nombres"]  ; 
 $id_usuario= $_POST["id_get"];
  $email=$_POST["email"];
 $password_user =$_POST["password_user"];
 $password_repeat=$_POST["password_repeat"];
+$rol=  $_POST["rol"];
 
 if($password_user==""){
 
@@ -18,12 +20,14 @@ if($password_user==""){
         $sentencia = $pdo->prepare("UPDATE tb_usuarios
         SET nombres=:nombres,
          email=:email,
-           fyh_actualizacion=:fyh_actualizacion
+           fyh_actualizacion=:fyh_actualizacion,
+           id_rol=:id_rol
             where id_usuario=:id_usuario");
     
         $sentencia->bindParam('nombres',$nombres);
         $sentencia->bindParam('email',$email);
         $sentencia->bindParam('fyh_actualizacion',$fechaHora);
+        $sentencia->bindParam('id_rol',$rol);
         $sentencia->bindParam('id_usuario',$id_usuario);
         $sentencia->execute();
     
@@ -54,13 +58,15 @@ if($password_user==""){
     SET nombres=:nombres,
      email=:email,
        password_user=:password_user, 
-       fyh_actualizacion=:fyh_actualizacion
+       fyh_actualizacion=:fyh_actualizacion,
+       id_rol=:id_rol
         where id_usuario=:id_usuario");
 
     $sentencia->bindParam('nombres',$nombres);
     $sentencia->bindParam('email',$email);
     $sentencia->bindParam('password_user',$password_user);
     $sentencia->bindParam('fyh_actualizacion',$fechaHora);
+    $sentencia->bindParam('id_rol',$rol);
     $sentencia->bindParam('id_usuario',$id_usuario);
     $sentencia->execute();
 

@@ -19,7 +19,7 @@ include('../app/controllers/roles/list_roles.php');
           <table id="tablaroles" class="table table-bordered table-hover table-striped">
             <thead class="bg bg-dark">
               <tr>
-                <!-- <th>#</th> -->
+                 <th>#</th> 
                 <th>Numero rol</th>
                 <th>Nombre</th>
                 <th>Acciones</th>
@@ -36,14 +36,14 @@ include('../app/controllers/roles/list_roles.php');
 
                 <tr>
 
-                <td><?php echo $contador; ?></td>
+                <td><?php echo $contador;?></td>
                   <td><?php echo $rol['id_rol'];?></td>
                   <td><?php echo $rol['rol']; ?> </td>
                   <td>
                     <div class="btn-group justify-content-center pl-3">
                       <a href="show.php?id=<?php echo $idrol; ?>" type="button" class="btn btn-info"><i class="fa fa-eye">Ver</i></a>
 
-                      <a href="updateusuario.php?id=<?php echo $idrol; ?>" type="button" class="btn btn-success pl-1">
+                      <a href="update.php?id=<?php echo $idrol; ?>" type="button" class="btn btn-success pl-1">
                         <i class="bi bi-pencil-square"></i>
                         Editar</a>
                       <a href="delete.php?id=<?php echo $idrol; ?>" type="button" class="btn btn-danger pl-1">

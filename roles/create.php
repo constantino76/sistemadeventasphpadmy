@@ -1,7 +1,5 @@
    
-   <!-- libreria de swalert -->
    
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
    
    <!-- recordar esta seccion dse php para los mensajes de sesion  debe ir primero  -->
    <?php  
@@ -25,14 +23,12 @@
    <form action="../app/controllers/roles/create.php" method="post">
    <div class="card-body">
    <div class="form-group">
-   <label for="id_rol">Rol id </label>
-   <input type="text" class="form-control" name="id_rol" placeholder="Ingrese el id del rol " required>
-   </div>
+   
 
         <div class="form-group">
    
-   <label for="rol"> Nombre</label>
-   <input type="text" class="form-control" name ="rol" placeholder="rol" required>
+   <label for="rol"> Nombre del rol</label>
+   <input type="text" class="form-control" name ="rol" placeholder="nombre del rol" required>
      </div>
    
    <div class="form-group">
