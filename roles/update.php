@@ -26,7 +26,7 @@ include('../app/controllers/roles/update_rol.php');
 
      <div class="form-group">
 
-<label for="rol"> Nombre del rol</label>
+<label for="rol"> Nombre del rol  asignado</label>
 <input type="text" class="form-control" name ="rol" placeholder="nombre del rol"  value="<?php echo $rol;?>"required>
 
      </div>
@@ -35,7 +35,7 @@ include('../app/controllers/roles/update_rol.php');
 
 
 <div class="form-group">
-    <a  href="index.php"  class="btn btn-secondary">cancelar</a>
+    <a  href="index.php"  class="btn btn-secondary">Cancelar</a>
 <input type="submit"  class="btn btn-success"value ="Actualizar">
 
 </div>
