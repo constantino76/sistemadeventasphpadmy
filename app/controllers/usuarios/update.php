@@ -29,7 +29,7 @@ if($password_user==""){
         $sentencia->bindParam('fyh_actualizacion',$fechaHora);
         $sentencia->bindParam('id_rol',$rol);
         $sentencia->bindParam('id_usuario',$id_usuario);
-        $sentencia->execute();
+         $sentencia->execute();
     
         session_start();
         $_SESSION['mensaje'] = "Se actualizo  el usuario de la manera correcta";

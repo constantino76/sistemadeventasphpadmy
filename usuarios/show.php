@@ -32,6 +32,12 @@ include("../app/controllers/usuarios/show.php");
 
 </div>
 
+<div class="form-group">
+<label for="exampleInputEmail1">Rol</label>
+<input type="email" class="form-control" name="rol" value="<?php echo$rol ; ?>"readonly/>
+
+</div>
+
 
   
 <div class="form-group">
