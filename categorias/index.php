@@ -13,7 +13,7 @@ include('../app/controllers/categorias/list_categorias.php');
     <div class="col-md-8">
       <div class="card card-secondary mt-3">
         <div class="card-header">
-          <h3 class="card-title">lista de categorias </h3>
+          <h3 class="card-title">Lista de categorias </h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -42,7 +42,7 @@ include('../app/controllers/categorias/list_categorias.php');
                     <div class="btn-group justify-content-center pl-3">
                       <a href="show.php?id=<?php echo $idcategoria; ?>" type="button" class="btn btn-info"><i class="fa fa-eye">Ver</i></a>
 
-                      <a href="updateusuario.php?id=<?php echo $idcategoria; ?>" type="button" class="btn btn-success pl-1">
+                      <a href="update.php?id=<?php echo $idcategoria; ?>" type="button" class="btn btn-success pl-1">
                         <i class="bi bi-pencil-square"></i>
                         Editar</a>
                       <a href="delete.php?id=<?php echo $idcategoria; ?>" type="button" class="btn btn-danger pl-1">
