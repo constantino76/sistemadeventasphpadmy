@@ -4,7 +4,7 @@ include("../app/config.php");
 
 include("../layout/Sesion.php");
 include("../layout/parte1.php");
-include("../app/controllers/show/show.php");
+include("../app/controllers/categorias/show.php");
 
 ?>
 
@@ -14,7 +14,7 @@ include("../app/controllers/show/show.php");
 
 <div class="card  card-danger">
 <div class="card-header">
-<h3 class="card-title">Datos usuario</h3>
+<h3 class="card-title">Eliminar categoria</h3>
 </div>
 
 
@@ -29,11 +29,7 @@ include("../app/controllers/show/show.php");
 <input type="text" class="form-control" name ="nombres" value="<?php echo$nombre; ?>" readonly/>
 
      </div>
-<div class="form-group">
-<label for="exampleInputEmail1">Correo</label>
-<input type="email" class="form-control" name="email" value="<?php echo$email ; ?>"readonly/>
 
-</div>
 
  
 
