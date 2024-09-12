@@ -21,7 +21,8 @@
   
 
 
-
+ <!-- jQuery -->
+ <script src="<?php echo $URL ;?>/public/templates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
 
 </head>
 <body class="hold-transition sidebar-mini">

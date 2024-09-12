@@ -7,13 +7,23 @@
 include('../app/controllers/categorias/list_categorias.php'); 
 
 ?>
+   
 
+           
 
   <div class="row justify-content-center mt-3">
+  
     <div class="col-md-8">
       <div class="card card-secondary mt-3">
         <div class="card-header">
-          <h3 class="card-title">Lista de categorias </h3>
+          <h3 class="card-title">Lista de categorias  
+
+             <button type="button" class="btn btn-success " data-toggle="modal" data-target="#modal-create">
+                 <i class="fa-fas-plus"></i> 
+                 Registro de categoria
+                </button>
+                
+                 </h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -132,3 +142,91 @@ include('../app/controllers/categorias/list_categorias.php');
           }).buttons().container().appendTo('#tablausuarios_wrapper .col-md-6:eq(0)');
         });
       </script>
+ <!-- modal para agregar categoria -->
+
+<div class="modal fade" id="modal-create">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Registro de categoria</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+<div class="card-body">
+     <div class="form-group">
+
+<label for="nombre"> Nombre</label>
+<input type="text" class="form-control" id ="nombre_categoria" placeholder="nombre" required>
+
+     </div>
+</div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" id ="registro">Registrar</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+<!-- actualizacion de la categoria -->
+
+
+<div class="modal fade" id="modal-update">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Actualizar categoria</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+<div class="card-body">
+     <div class="form-group">
+
+<label for="nombre"> Nombre</label>
+<input type="text" class="form-control" id ="nombre_categoria" placeholder="nombre" required>
+
+     </div>
+</div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" id ="registro">Salvar cambios</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+      
+ <!-- fin  -->
+
+
+      <script>
+
+
+      $('#registro').click(function(){
+
+
+      var nombre_categoria=$('#nombre_categoria').val();
+      var  url="../app/controllers/categorias/create.php";
+      $.get(url,{nombre_categoria:nombre_categoria},function(datos){
+
+
+
+alert("categoria registrada");
+
+      });
+
+      });
+        
+      </script>
+
+ 
