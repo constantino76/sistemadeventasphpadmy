@@ -55,7 +55,8 @@ unset($_SESSION['nombreusuario']);
 
     <!-- Main content -->
     <div class="content">
-     
+    <div class="darkmode-switch"><span>LIGHT</span><label class="switch">
+    <input type="checkbox" name="toggle-darkmode"><div></div></label><span>DARK</span></div>
       <div class="container-fluid">
         <div class="row bg bg-dark">
           <div class="col-lg-6">

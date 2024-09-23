@@ -1,11 +1,11 @@
 <?php
 include('../../config.php');
 
-$nombre_categoria=$_POST["nombre_categoria"]  ; 
-$id_categoria= $_POST["id_categoria"];
+$nombre_categoria=$_GET["nombre_categoria"]  ; 
+$id_categoria= $_GET["id_categoria"];
  
 
-
+echo"Hola desde update";
     
 
     $sentencia = $pdo->prepare("UPDATE tb_categorias
@@ -25,15 +25,37 @@ if( $sentencia->execute()){
     $_SESSION['mensaje'] = "Se actualizo de la manera correcta  la categoria";
       $_SESSION['icono']="success";
     
-  
-    header('Location: '.$URL.'/categorias');
+  ?>
+
+  <scrip>
+
+
+
+location.href="<?php echo $URL;?>/categorias"
+
+
+
+  </script>
+   
+    <?php
 
 }else{
 
     session_start();
      $_SESSION['mensaje'] = "Error no se actualizo la categoria";
      $_SESSION['icono']="error";
-   header('Location: '.$URL.'/categorias/update.php?id='.$id_categoria);
+
+
+     ?>
+   <!-- header('Location: '.$URL.'/categorias/update.php?id='.$id_categoria); -->
+
+   <script>
+
+location.href="<?php echo $URL;?>/categorias"
+
+  </script>
+
+   <?php
 }
 
 

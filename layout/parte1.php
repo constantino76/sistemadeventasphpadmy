@@ -65,6 +65,8 @@
     <a href="<?php echo$URL ;?>" class="brand-link">
       <img src="<?php echo $URL ;?>/public/images/carrito.PNG" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Sistema de ventas</span>
+
+
     </a>
 
     <!-- Sidebar -->

@@ -15,12 +15,20 @@ VALUES (:nombre_categoria,:fyh_creacion)");
    
    if( $sentencia->execute() ){
 
-
+   echo"registrado";
    session_start();
    $_SESSION['mensaje'] = "Se registro la categoria  de la manera correcta";
      $_SESSION['icono']="success";
    
-   header('Location: '.$URL.'/categorias');
+  // header('Location: '.$URL.'/categorias');
+?>
+  <script>
+
+location.href="<?php echo $URL;?>/categorias"
+
+  </script>
+<?php
+
 
 }else{
   // echo "error las contraseñas no son iguales";
@@ -28,7 +36,7 @@ VALUES (:nombre_categoria,:fyh_creacion)");
    $_SESSION['mensaje'] = "Error la categoria no se registro";
    $_SESSION['icono']="error";
 
-   header('Location: '.$URL.'/categorias/create.php');
+   header('Location: '.$URL.'/categorias');
 }
 
       session_start();
